@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MealSuggestions.Api.Tests/MealSuggestions.Api.Tests.csproj" />
+  <Project Path="MealSuggestions.Api/MealSuggestions.Api.csproj" />
+</Solution>
