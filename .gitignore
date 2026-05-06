@@ -1,0 +1,54 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+# Ignorar arquivos de indexação do VS
+*.vsidx
+*.sqlite
+
+# Ignorar a pasta .vs inteira
+.vs/
+
+# Ignorar configurações locais do Claude Code
+.claude/
+CLAUDE.md
+docs/
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Configurações locais com segredos
+appsettings.Development.json
+appsettings.*.json
+!appsettings.json
+
+# Node / Frontend
+node_modules/
+dist/
+.next/
+out/
+.nuxt/
+.cache/
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
