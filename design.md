@@ -1,158 +1,203 @@
 ---
-name: Cosmic Culinary Interface
+name: Deep Space Glass
 colors:
-  surface: '#121315'
-  surface-dim: '#121315'
-  surface-bright: '#38393b'
-  surface-container-lowest: '#0d0e10'
-  surface-container-low: '#1a1c1e'
-  surface-container: '#1f2022'
-  surface-container-high: '#292a2c'
-  surface-container-highest: '#343537'
-  on-surface: '#e3e2e4'
-  on-surface-variant: '#c3c6ce'
-  inverse-surface: '#e3e2e4'
-  inverse-on-surface: '#2f3032'
-  outline: '#8d9198'
-  outline-variant: '#43474d'
-  surface-tint: '#b0c9ea'
-  primary: '#b0c9ea'
-  on-primary: '#18324c'
-  primary-container: '#0f2a44'
-  on-primary-container: '#7992b1'
-  inverse-primary: '#48607d'
-  secondary: '#dac49c'
-  on-secondary: '#3c2e12'
-  secondary-container: '#544526'
-  on-secondary-container: '#c8b38b'
-  tertiary: '#84dd15'
-  on-tertiary: '#1c3700'
-  tertiary-container: '#172e00'
-  on-tertiary-container: '#5da000'
-  error: '#ffb4ab'
-  on-error: '#690005'
-  error-container: '#93000a'
-  on-error-container: '#ffdad6'
-  primary-fixed: '#d1e4ff'
-  primary-fixed-dim: '#b0c9ea'
-  on-primary-fixed: '#001d36'
-  on-primary-fixed-variant: '#304864'
-  secondary-fixed: '#f7e0b6'
-  secondary-fixed-dim: '#dac49c'
-  on-secondary-fixed: '#251a02'
-  on-secondary-fixed-variant: '#544526'
-  tertiary-fixed: '#9ffa3a'
-  tertiary-fixed-dim: '#84dd15'
-  on-tertiary-fixed: '#0e2000'
-  on-tertiary-fixed-variant: '#2c5000'
-  background: '#121315'
-  on-background: '#e3e2e4'
-  surface-variant: '#343537'
+  bg: '#06030f'
+  accent: '#7c3aed'
+  accent-light: '#a78bfa'
+  accent-glow: 'rgba(124, 58, 237, 0.35)'
+  glass: 'rgba(255, 255, 255, 0.04)'
+  glass-border: 'rgba(255, 255, 255, 0.08)'
+  glass-border-hover: 'rgba(124, 58, 237, 0.4)'
+  text: '#f8fafc'
+  text-2: '#94a3b8'
+  text-3: '#475569'
+  error: '#f87171'
+  error-bg: 'rgba(239, 68, 68, 0.08)'
+  error-border: 'rgba(239, 68, 68, 0.25)'
+  diff-easy: '#34d399'
+  diff-medium: '#fbbf24'
+  diff-hard: '#f87171'
+  missing: '#fbbf24'
+  gradient-text: 'linear-gradient(135deg, #c4b5fd 0%, #818cf8 50%, #60a5fa 100%)'
 typography:
   h1:
     fontFamily: Space Grotesk
-    fontSize: 48px
+    fontSize: 52px
+    fontWeight: '800'
+    lineHeight: '1.05'
+    letterSpacing: '-0.03em'
+    style: gradient-text
+  label:
+    fontFamily: Space Grotesk
+    fontSize: 11px
     fontWeight: '700'
-    lineHeight: '1.1'
-    letterSpacing: 0.05em
-  h2:
+    lineHeight: '1.0'
+    letterSpacing: '0.12em'
+    textTransform: uppercase
+    color: accent-light
+  label-muted:
     fontFamily: Space Grotesk
-    fontSize: 32px
-    fontWeight: '600'
-    lineHeight: '1.2'
-    letterSpacing: 0.03em
-  h3:
-    fontFamily: Space Grotesk
-    fontSize: 24px
-    fontWeight: '600'
-    lineHeight: '1.2'
-    letterSpacing: 0.02em
-  body-lg:
-    fontFamily: Manrope
-    fontSize: 18px
+    fontSize: 10px
+    fontWeight: '700'
+    lineHeight: '1.0'
+    letterSpacing: '0.15em'
+    textTransform: uppercase
+    color: text-3
+  body:
+    fontFamily: Inter
+    fontSize: 13px
     fontWeight: '400'
     lineHeight: '1.6'
-    letterSpacing: 0px
+    color: text-2
   body-md:
-    fontFamily: Manrope
+    fontFamily: Inter
     fontSize: 16px
     fontWeight: '400'
-    lineHeight: '1.5'
-    letterSpacing: 0px
-  label-caps:
+    lineHeight: '1.6'
+    color: text-2
+  numeric:
     fontFamily: Space Grotesk
-    fontSize: 12px
-    fontWeight: '700'
-    lineHeight: '1.0'
-    letterSpacing: 0.15em
-  stats-num:
-    fontFamily: Space Grotesk
-    fontSize: 20px
-    fontWeight: '500'
-    lineHeight: '1.0'
-    letterSpacing: 0.02em
+    fontSize: 28px
+    fontWeight: '800'
+    textAlign: center
+    color: text
 spacing:
   base: 8px
   xs: 4px
-  sm: 12px
-  md: 24px
-  lg: 48px
-  xl: 64px
-  panel-gap: 2px
+  sm: 8px
+  md: 12px
+  lg: 24px
+  xl: 48px
+  page-top: 72px
+  page-bottom: 96px
+  page-horizontal: 20px
+  content-max-width: 680px
+  panel-padding: 24px
+  card-padding: '20px 24px'
+  gap-panels: 12px
+  gap-cards: 12px
+  gap-rows: 8px
+border-radius:
+  panel: 20px
+  card: 20px
+  button-primary: 14px
+  button-ghost: 8px
+  input: 10px
+  badge: 999px
+  chip: 8px
+  step-number: 50%
+  time-input: 14px
 ---
 
 ## Brand & Style
 
-This design system establishes a "NASA-punk" aesthetic—a fusion of high-precision aerospace technology and approachable culinary planning. The personality is authoritative and technical yet infused with the wonder of space exploration. It prioritizes a high-utility, cockpit-like experience where meal preparation is treated as mission-critical data.
+"Deep Space Glass" — dark, minimal, focused. Single-column interface where the user provides ingredients and time; an AI agent returns recipe suggestions. No navigation, no sidebar, no dashboard metaphor.
 
-The visual style utilizes a **Tactile Sci-Fi** approach. It combines sharp, angular "tech panels" for structural data with soft, badge-like circular elements for celebratory actions and status indicators. The interface features isometric vector illustrations with medium-weight strokes and subtle grain textures to provide a physical, "lived-in" feel to the digital environment.
+The personality is calm and precise. The interface defers to content; structural chrome is invisible until needed. Purple is the only color with meaning — it signals interactivity and brand identity. Everything else is neutral or semantic (green = easy, yellow = medium/warning, red = hard/error).
 
 ## Colors
 
-The palette is anchored by deep galactic blues, providing a high-contrast foundation for technical data. **Space Blue** serves as the primary atmospheric layer, while **Deep Dark Blue** creates depth in recessed containers and shadows. 
+Background is near-black with a purple tint (`#06030f`). Two radial gradients are composited as a fixed pseudo-element: a large purple ellipse from the top center (18% opacity) and a smaller blue ellipse at the bottom-right (8% opacity). These are decorative only — they give depth without distraction.
 
-**Gold/Beige** is the primary functional color, used for structural borders and high-priority typography to evoke vintage star charts. **Tech Red** is reserved for critical actions and navigational alerts, while **Neon Green** signifies "Energy" and successful status updates. **Soft White** is used sparingly for highlights and simulated stellar backgrounds.
+**Accent** (`#7c3aed`) is the single interactive color. Used for focus rings, active states, button backgrounds, step number circles, and the pulsing brand badge dot. Light variant (`#a78bfa`) is used for section labels and ghost button text.
+
+**Text hierarchy** uses three shades:
+- `#f8fafc` — primary (headings, values, interactive labels)
+- `#94a3b8` — secondary (body copy, descriptions, time display)
+- `#475569` — muted (column headers, footer attribution, empty states)
+
+**Semantic colors** appear only in specific contexts:
+- `#34d399` (green) — "Fácil" difficulty badge
+- `#fbbf24` (amber) — "Médio" difficulty badge + missing ingredients
+- `#f87171` (red) — "Difícil" difficulty badge + error states
 
 ## Typography
 
-This design system uses a dual-font strategy to balance technical precision with readability. **Space Grotesk** is used for all headers, labels, and numeric data; it should always be set with open tracking (letter-spacing) to mimic radar readouts and aerospace HUDs. Headers should be primarily all-caps.
+Dual-font system. **Space Grotesk** for all structural text: headings, section labels, badge text, column headers, numeric inputs, button labels. **Inter** for content: ingredient placeholders, recipe descriptions, step text, body copy.
 
-**Manrope** serves as the secondary typeface for body copy and long-form recipe instructions. It provides a humanistic touch that balances the rigid geometry of the headers, ensuring that complex ingredient lists and preparation steps remain legible during high-activity kitchen tasks.
+The H1 ("Chef Alexandre") uses gradient text — a diagonal sweep from violet (`#c4b5fd`) through indigo (`#818cf8`) to blue (`#60a5fa`). Applied via `-webkit-background-clip: text`.
+
+Section labels follow a strict pattern: 10–11px / Space Grotesk / 700 weight / 0.12–0.15em tracking / uppercase. Accent-light (`#a78bfa`) for panel section titles ("Ingredientes", "Tempo disponível", "Modo de preparo"). Muted (`#475569`) for structural labels (column headers, footer).
 
 ## Layout & Spacing
 
-The layout follows a **Fixed Tech-Grid** philosophy. Primary content is housed within rigid, structural panels that resemble modular spaceship components. A strict 8px rhythm governs all internal padding.
+Single-column, centered, max-width 680px. Page padding: 72px top, 96px bottom, 20px horizontal. No grid, no sidebar.
 
-Layouts should favor a "Dashboard" view rather than a scrolling feed. Content blocks are separated by narrow 2px "panel gaps" that reveal the underlying starry background, creating the illusion of a floating interface. Use isometric perspectives for featured meal cards to break the 2D plane and add a sense of physical hardware.
+Form panels stack vertically with 12px gap. Each panel is a glass card (borderRadius 20, padding 24px). Submit button sits directly below with 4px extra margin-top. Results appear below the form with 48px separation.
 
-## Elevation & Depth
+Spacing rhythm is 8px base: xs=4, sm=8, md=12 (panel gap), lg=24 (panel padding), xl=48 (results offset).
 
-Hierarchy is established through **Tonal Layers** and **Bold Outlines** rather than traditional shadows. 
-- **Level 0 (Background):** The primary Space Blue gradient with a subtle grain texture and sparse "star" particles.
-- **Level 1 (Panels):** Deep Dark Blue surfaces with 1px solid Gold/Beige borders.
-- **Level 2 (HUD Overlays):** Semi-transparent (80% opacity) versions of Space Blue with frosted glass blurs and Neon Green accents to indicate active selection.
-- **Level 3 (Interaction):** Elements "pop" using Tech Red or Neon Green glows (outer-glow effects) instead of drop shadows to simulate illuminated controls.
+## Glass Morphism
 
-## Shapes
+All panels and cards use the `.glass` pattern:
+- Background: `rgba(255,255,255,0.04)`
+- Border: `1px solid rgba(255,255,255,0.08)`
+- `backdrop-filter: blur(12px)`
 
-This design system utilizes a contrast of "Hard Tech" and "Organic Badge" shapes. 
-- **Panels & Containers:** Use sharp, 0px corners. For primary navigation containers, apply a 45-degree "chamfer" or "clipped corner" effect (12px) to the top-right and bottom-left corners.
-- **Badges & Status Icons:** Use pill-shaped or circular radii to differentiate them from the structural UI. 
-- **Illustrations:** Characters and food items should feature medium-weight outlines and wavy, badge-style container frames to maintain the "cartoon-tech" charm.
+On focus-within, panels upgrade their border to accent-hover (`rgba(124,58,237,0.4)`) with a subtle inner glow (`inset 0 0 20px rgba(124,58,237,0.04)`).
+
+Recipe cards use the same values inline (not the `.glass` class) with a 2px accent strip at the top (purple→indigo→transparent gradient, 70% opacity) and a separator line between header and steps.
 
 ## Components
 
-### Buttons
-Primary actions use **Tech Red** with sharp corners and all-caps **Space Grotesk** text. Secondary actions use the **Gold/Beige** border-only "ghost" style. All buttons should have a subtle inner-glow on hover.
+### Button — Primary
+Full-width, 14px borderRadius. Gradient fill `#7c3aed → #4f46e5` (135°). Box-shadow: `0 0 20px rgba(124,58,237,0.3)` + inset highlight. Hover: shadow expands to 30px/50% + `translateY(-1px)`. Disabled: 35% opacity, no transform, `not-allowed` cursor. Loading state replaces icon with a 16px spinning ring (border `2px`, border-top white, `spin 0.7s linear infinite`).
 
-### Badges & Chips
-Status indicators (e.g., "High Protein," "Fuel Low") are rendered as circular or wavy-bordered badges. Use **Neon Green** for positive energy states and **Tech Red** for depletion or warnings.
-
-### Data Panels (Cards)
-Meal cards must be isometric. They feature a 1px Gold border and a header strip in a darker shade of Blue. Key metrics (Calories, Prep Time) should be displayed in the **Label-Caps** typography style at the bottom of the card.
+### Glass Panels (Form Cards)
+`borderRadius: 20`, `padding: 24px`. Use `.glass` class. Focus-within upgrades border.
 
 ### Input Fields
-Inputs are recessed containers using the **Deep Dark Blue** color. The cursor and focus state should utilize a "blinking" Neon Green block to reinforce the retro-tech terminal aesthetic.
+`borderRadius: 10`, `background: rgba(255,255,255,0.04)`, `border: 1px solid rgba(255,255,255,0.08)`. Focus via JS event handlers: border → `rgba(124,58,237,0.5)`, box-shadow → `0 0 0 2px rgba(124,58,237,0.15)`.
 
-### Progress Bars
-Energy and nutrient tracking use segmented bars (divided into blocks) rather than continuous fills, evoking 8-bit power meters.
+### Select (Unit)
+Same base style as input. Custom SVG chevron via `backgroundImage` data URI (color `#475569`). `appearance: none`, `paddingRight: 28px`. Option background: `#0d0b1a`.
+
+### Time Input
+Larger variant: 80px wide, `borderRadius: 14`, `fontSize: 28px / fontWeight: 800`. Background `rgba(124,58,237,0.08)`, border `rgba(124,58,237,0.3)`. Focus: border 0.6 opacity + `0 0 0 3px rgba(124,58,237,0.18)` ring.
+
+### Preset Buttons (Time)
+Pill shape (`borderRadius: 999`). Two states:
+- **Inactive:** transparent bg, `rgba(255,255,255,0.08)` border, text-3 color. Hover → accent border + accent-light text.
+- **Active:** `rgba(124,58,237,0.2)` bg, `rgba(124,58,237,0.7)` border, `#c4b5fd` text.
+
+### Ghost Button (Add Ingredient)
+`borderRadius: 8`, `background: rgba(124,58,237,0.12)`, `border: rgba(124,58,237,0.25)`, text accent-light. Hover: bg → 0.20, border → 0.45. Contains a `+` SVG icon (11×11, strokeWidth 1.8).
+
+### Remove Button
+32×32px, `borderRadius: 8`, transparent bg. Shows `×` (fontSize 18). Hover → `#f87171` text + `rgba(239,68,68,0.1)` bg.
+
+### Brand Badge
+Pill (`borderRadius: 999`), `background: rgba(124,58,237,0.12)`, border 0.3 opacity accent. Contains 6×6px circle dot with `pulse-glow 2s ease-in-out infinite`. Text: 11px / Space Grotesk / 700 / 0.1em tracking / uppercase / accent-light.
+
+### Error Box
+`borderRadius: 16`, `background: rgba(239,68,68,0.08)`, `border: rgba(239,68,68,0.25)`. Two-line: label ("ERRO") in `#f87171` / 10px + message in `rgba(252,165,165,0.8)` / 13px. Animates in with `fadeUp 0.2s`.
+
+### Recipe Card
+`borderRadius: 20`, glass-like bg/border inline. Three sections separated by 1px dividers:
+1. **Header** — index label (text-3) + difficulty badge + time display / recipe name (20px/700/Space Grotesk) + description
+2. **Steps** — "Modo de preparo" label + ordered list. Each step: 22px circle step number (purple bg/border, accent-light text) + step text
+3. **Missing ingredients** (conditional) — amber-tinted panel with pill chips for each missing item
+
+### Difficulty Badge
+Pill (`borderRadius: 999`), 10px/700/Space Grotesk/uppercase. Three variants:
+- Fácil: `#34d399` text, 10% bg, 25% border
+- Médio: `#fbbf24` text, 10% bg, 25% border
+- Difícil: `#f87171` text, 10% bg, 25% border
+
+### Empty States
+- No ingredients: dashed border `rgba(124,58,237,0.2)`, `rgba(124,58,237,0.03)` bg, 32px vertical padding
+- No recipes found: glass card, centered, 48px padding, emoji + heading + helper text
+
+## Animations
+
+Three keyframe animations defined in globals.css:
+
+| Name | Duration | Easing | Usage |
+|------|----------|--------|-------|
+| `spin` | 0.7s | linear infinite | Loading spinner in submit button |
+| `fadeUp` | 0.2–0.3s | ease | Error box + results container on appear |
+| `pulse-glow` | 2s | ease-in-out infinite | Brand badge dot box-shadow |
+
+`fadeUp`: `opacity: 0, translateY(10px)` → `opacity: 1, translateY(0)`.
+
+`pulse-glow`: box-shadow oscillates between `0 0 6px rgba(124,58,237,0.6)` and `0 0 12px rgba(124,58,237,1)`.
